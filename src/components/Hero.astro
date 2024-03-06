@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('hero');
+
+  console.log(pages)
+
+  return pages
+}
+
+---
+
+<header>
+  Hero
+</header>
