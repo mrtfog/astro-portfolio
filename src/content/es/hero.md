@@ -1,3 +1,0 @@
-{
-"title": "Titulo del Hero"
-}
