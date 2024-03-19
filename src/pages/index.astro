@@ -1,10 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { loadTranslations } from '../utils/i18n';
-const translations = await loadTranslations('es');
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Martín Fogliacco | Portfolio">
-  <h1>{translations.greeting}</h1>
+  Welcome to <span class="text-gradient">Astro</span>
 </Layout>
 
