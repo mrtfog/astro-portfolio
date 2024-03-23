@@ -1,6 +1,14 @@
 html {
-    scroll-behavior: smooth;
+    background: #001219;
+    color: #f5f5f5;
+    scroll-behavior: initial;
 }
+
+body {
+    min-height: 100%;
+    height: auto;
+}
+
 :root {
     font-family: "Raleway Variable", sans-serif;
     --line-height-base: 1.5;
