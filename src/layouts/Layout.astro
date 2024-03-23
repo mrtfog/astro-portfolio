@@ -1,22 +1,48 @@
 ---
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+import Header from "@/components/Header.astro"
+import NoiseBackground from "@/components/NoiseBackground.astro"
+import "@fontsource-variable/raleway"
+import "@fontsource-variable/rubik"
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/css/index.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<NoiseBackground />
+		<main role="main" class="main-content">
+			<slot />
+		</main>
 	</body>
 </html>
+
+<style is:global>
+	html{
+		font-family: 'Rubik Variable', sans-serif;
+		background: #001219;
+		color: #f5f5f5;
+		scroll-behavior: initial;
+	}
+
+	body{
+		min-height: 100%;
+  		height: auto;
+		height: 600vh;
+	}
+</style>

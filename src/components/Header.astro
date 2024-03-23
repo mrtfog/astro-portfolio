@@ -1,0 +1,36 @@
+---
+import { getI18N } from "@/i18n/index";
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+const { HEADER } = i18n
+import LanguageSelector from "@/components/LanguageSelector.astro"
+---
+
+<header class="header" role="heading" id="header">
+    <div class="header-container">
+        <div class="font-bold font-raleway text-[36.67px]">
+            Martín Fogliacco<span class="text-[#EBB654]">.</span>
+        </div>
+    
+        <div class="flexCenter gap-5">
+            <nav role="navigation">
+                <ul class="flexCenter gap-5 text-[22.66px]" role="list">
+                    
+                    <li>
+                        <a aria-label={HEADER.HOME_ARIA_LABEL} href="/#home">{HEADER.HOME}</a>
+                    </li>
+                    
+                    <li>
+                        <a aria-label={HEADER.PORTFOLIO_ARIA_LABEL} href="/#portfolio">{HEADER.PORTFOLIO}</a>
+                    </li>
+
+                    <li>
+                        <a aria-label={HEADER.ABOUT_ARIA_LABEL} href="/#about">{HEADER.ABOUT}</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <LanguageSelector />
+        </div>
+    </div>
+</header>
