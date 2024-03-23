@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    font-family: "Raleway Variable", sans-serif;
+    --line-height-base: 1.5;
+    --font-weight-base: 400;
+
+    color: #f0fbff;
+    background-color: #001219;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+    color: #f5f5f5;
+    background: rgba(235, 182, 84, 0.8);
+}
+
+::selection {
+    color: #f5f5f5;
+    background: rgba(235, 182, 84, 0.8);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001219;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #013951;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #001e2b;
+}
