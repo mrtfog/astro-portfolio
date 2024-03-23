@@ -1,0 +1,46 @@
+{
+    "SEO_TITLE": "Martín Fogliacco | Portfolio",
+    "SEO_DESCRIPTION": "Martín, a Creative Full Stack Developer specializing in creating accessible, responsive, interactive, and animated websites with a strong focus on UX/UI.",
+    "SEO_KEYWORDS": "Martín, Full Stack Developer, web development, accessible, responsive, interactive, animated, UX, UI, website design, creative developer, animations",
+    "SEO": {
+        "ERROR_404_TITLE": "404 Page not found - Martín Fogliacco",
+        "ERROR_404_DESCRIPTION": "Page not found (Error 404). Check the URL or explore our sections."
+    },
+    "HEADER": {
+        "HOME": "Inicio",
+        "PORTFOLIO": "Portafolio",
+        "ABOUT": "Sobre Mi",
+        "HOME_ARIA_LABEL": "Link al inicio",
+        "PORTFOLIO_ARIA_LABEL": "Link al Portafolio",
+        "ABOUT_ARIA_LABEL": "Link a la sección 'Acerca de'"
+    },
+    "HEADER_BUTTON": "NOMINATION CRITERIA",
+    "HERO_SUBTITLE": "Awards for the Spanish-Speaking Streaming Community",
+    "INTRO_TITLE": "Welcome",
+    "INTRO_TITLE_AFTER_BR": "to the ESLAND Awards",
+    "INTRO_DESCRIPTION_1": "Cinema has the Oscars, music has the Grammys, and <strong>streaming has the ESLAND</strong>. These awards celebrate the creativity and talent of the best content creators in the Spanish-speaking community.",
+    "INTRO_DESCRIPTION_2": "Spain, Latin America, and Andorra are united by creators and their communities, to reminisce and relive <strong>some of the best moments of the year.</strong>",
+    "INTRO_DESCRIPTION_3": "After two successful galas, one at the Palau de la Música Catalana in Barcelona and another at the National Auditorium in Mexico City, we eagerly await <strong>the third edition in Andorra.</strong>",
+    "FOOTER": {
+        "DISCLAIMER": "All rights reserved. - This is not the official website, developed by @midudev for educational purposes.",
+        "LEGAL": {
+            "TITLE": "Legal",
+            "NOTICE": "Legal Notice",
+            "PRIVACY": "Privacy Policy",
+            "COOKIES": "Cookie Policy",
+            "PRIVACY_POLICY": "Privacy Policy",
+            "TOS": "Terms of Service"
+        },
+        "WEB_MAP": {
+            "TITLE": "Site Map",
+            "HOME": "Home",
+            "INFO": "Information",
+            "ARCHIVE": "Archive"
+        },
+        "PRODUCED_BY": "Produced by"
+    },
+    "ERROR_404": {
+        "TITLE": "Page not found",
+        "BACK_HOMEPAGE_BTN": "Back to homepage"
+    }
+}
