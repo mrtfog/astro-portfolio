@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "./Hero.astro";
 
 import { getI18N } from "@/i18n/index";
 const { currentLocale } = Astro
@@ -8,5 +9,5 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>  
-  Welcome to <span class="text-gradient">Astro</span>
+  <Hero />
 </Layout>

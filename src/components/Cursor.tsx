@@ -1,61 +1,48 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React, { useEffect } from "react";
+import gsap from "gsap";
 
 const Cursor: React.FC = () => {
-    useEffect(() => {
-        const cursor = document.getElementById('custom-cursor');
-        const links = document.querySelectorAll('a');
+  useEffect(() => {
+    const cursor = document.getElementById("custom-cursor");
+    const links = document.querySelectorAll("a");
 
-        const onMouseMove = (event: MouseEvent) => {
-            const { clientX, clientY } = event;
-            gsap.to(cursor, {
-                x: clientX,
-                y: clientY,
-            });
-        };
+    const onMouseMove = (event: MouseEvent) => {
+      const { clientX, clientY } = event;
+      gsap.to(cursor, {
+        x: clientX,
+        y: clientY,
+      });
+    };
 
-        const onMouseEnterLink = (event: Event) => {
-            const link = event.target as HTMLElement;
+    const onMouseEnterLink = () => {
+      gsap.to(cursor, {
+        scale: 4,
+      });
+    };
 
-            if (link.classList.contains('view')) {
-                gsap.to(cursor, {
-                    scale: 4,
-                });
+    const onMouseLeaveLink = () => {
+      gsap.to(cursor, {
+        scale: 1,
+      });
+    };
 
-            } else {
-                gsap.to(cursor, {
-                    scale: 4,
-                });
-            }
-        };
+    document.addEventListener("mousemove", onMouseMove);
 
-        const onMouseLeaveLink = () => {
-            gsap.to(cursor, {
-                scale: 1,
-            });
-        };
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", onMouseEnterLink);
+      link.addEventListener("mouseleave", onMouseLeaveLink);
+    });
 
-        document.addEventListener('mousemove', onMouseMove);
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      links.forEach((link) => {
+        link.removeEventListener("mouseenter", onMouseEnterLink);
+        link.removeEventListener("mouseleave", onMouseLeaveLink);
+      });
+    };
+  }, []);
 
-        links.forEach((link) => {
-            link.addEventListener('mouseenter', onMouseEnterLink);
-            link.addEventListener('mouseleave', onMouseLeaveLink);
-        });
-
-    
-        return () => {
-            document.removeEventListener('mousemove', onMouseMove);
-            links.forEach((link) => {
-                link.removeEventListener('mouseenter', onMouseEnterLink);
-                link.removeEventListener('mouseleave', onMouseLeaveLink);
-            });
-        };
-    }, []);
-
-    return (
-        <div id='custom-cursor' className='custom-cursor'>
-        </div>
-    );
+  return <div id="custom-cursor" className="custom-cursor"></div>;
 };
 
 export default Cursor;
